@@ -32,9 +32,16 @@ h1 {
 	margin: 70px auto 100px auto;
 }
 #about {
-	margin-top: 40;
+	margin-top: 60; 
 }
 #contact {
+	font-family: courier;
+	margin: 0;
+	padding: 0;
+}
+
+#contact-img {
+	text-align: center;
 	font-family: courier;
 	margin: 0;
 	padding: 0;
@@ -61,7 +68,7 @@ ul#links li a:hover {
 	padding-left: 15px;
 }
 #photo img {
-	width: 100%;
+	width: 20%;
 }
 #photo #caption {
 	color: rgba(0, 0, 0, 0.5);
@@ -130,12 +137,38 @@ ul#links li a:hover {
       text-decoration: none;
 }
 #footer {
-       position: fixed;
        text-align: center;
+	   position:sticky;
        bottom: 0px;
        width: 100%;
-			 font-size: 10px; !important
+	   font-size: 10px; !important
    }
+
+.column {
+float: left;
+width: 50%;
+padding-left: 0px;
+padding-right: 0px;
+}
+.column-picture {
+float: left;
+}
+.left {
+	width: calc(175px + 1.5em);
+}
+.right {
+	width: calc(100% - 175px - 1.5em);
+}
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.portrait {
+	padding-top: 15px;
+	width: 180px;
+}
 
 /* Mobile.
  */
