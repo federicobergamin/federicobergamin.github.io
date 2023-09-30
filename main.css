@@ -56,6 +56,7 @@ ul#links li {
 	font-family: -apple-system, helvetica, arial, sans-serif;
 	display: inline;
 	margin-right: 20px;
+	margin-top: 15px;
 }
 ul#links li a {
 	color: rgba(0, 0, 0, 0.8);
