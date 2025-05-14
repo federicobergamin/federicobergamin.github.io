@@ -11,6 +11,7 @@ body {
 	font-size: 15px;
 	line-height: 1.5em;
 	margin: 0;
+	background-color: rgb(244, 241, 241);
 }
 a {
 	color: rgba(0, 0, 0, 0.8);
@@ -171,7 +172,7 @@ float: left;
 	width: 180px;
 }
 
-li:nth-child(5) {
+li:nth-child(7) {
 	list-style-type: none; 
  }
 
@@ -181,4 +182,27 @@ li:nth-child(5) {
 	body {
 		margin: 0 7px 0 7px !important;
 	}
+}
+
+/* Stuff I am trying out.
+ */
+ .status-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: #fff;  White background */
+    color: #7f7f7f;  /* Black text */
+    padding: 10px 20px;
+    font-weight: normal;
+    font-size: 13px;
+   /* border-bottom: 1px solid #e0e0e0;  Light grey border for subtle separation */
+}
+
+.weather-info {
+    display: flex;
+    align-items: center;
+}
+
+.weather-icon {
+    margin-left: 5px;
 }

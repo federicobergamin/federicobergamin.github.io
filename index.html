@@ -18,7 +18,22 @@
 </head>
 
 <body>
+
 	<div id="index">
+		<div class="status-bar">
+			<div id="time">--:--</div>
+			<div id="location">LOADING...</div>
+			<div class="weather-info">
+				<span id="temperature">--°</span>
+				<span id="condition">--</span>
+				<span class="weather-icon" id="weather-icon">--</span>
+			</div>
+		</div>
+	
+		<!-- Load JavaScript files -->
+		<script src="js/timeService.js"></script>
+		<script src="js/weatherService.js"></script>
+		<script src="js/main.js"></script>
 		<div>
 			<div class="column-picture left">
 				<img class="portrait" src="imgs/profile.JPG">
@@ -92,6 +107,8 @@
 		<div id="about">
 			<h3>Random News</h3>
 			<ul>
+				<li>May 2025: The paper below was accepted at ICML. Updated camera ready and code will be available soon.</li>
+				<li>Apr. 2025: Our paper <a href="https://openreview.net/forum?id=Mttf1RoKKM#discussion">"Kinetic Langevin Diffusion for Crystalline Materials Generation"</a> done together with my colleague François was accepted at the AI4MAT workshop @ ICLR.</li>
 				<li>Oct. 2024: I wanted to understand better the relation between a flow matching and a score-based model. I wrote a short note on this <a href="https://hackmd.io/@fedbe/Hyryj7de1l"> here</a>.</li>
 				<li>Oct. 2024: Our work <a href="https://arxiv.org/abs/2410.16415">"On conditional diffusion models for PDE simulations"</a> done together with <a href="https://scholar.google.com/citations?user=Zm8hNeUAAAAJ&hl=en">Sasha</a> and <a href="https://cddcam.github.io/">Cristiana</a> while I was visiting Cambridge has been accepted at NeurIPS! Paper and code are also out now!</li> 
 				<li>Aug. 2024: I started as a postdoc still at DTU!</li> 
@@ -122,6 +139,9 @@
 					<li>
 						<a href="https://twitter.com/fedebergamin" class="fa fa-twitter"></a>
 					</li>
+					<li>
+						<a href="https://bsky.app/profile/federicobergamin.bsky.social" class="fa fa-bluesky"></a>
+					</li>
 					<!-- <li>
 							<a href="mailto:bergamin.federico@gmail.com?Subject=Hi!" class="fa fa-envelope" ></a>
 					</li> -->
@@ -133,6 +153,9 @@
 
 	<!-- <div id = "footer">
 		Personalized version of <a href="http://gregorygundersen.com/"> Gregory Gundersen</a>'s website theme.
+	</div> -->
+	<!-- <div id = "footer">
+		Federico Bergamin (c) 2024 :)
 	</div> -->
 	<!-- <div id="about">
 		<h3>News</h3>
