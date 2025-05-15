@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Set to true to force the preferred location
     // Set to false to attempt to use user's location
     WeatherService.init(true);
+
+    ThemeService.init();
     
     console.log('Weather & Time display initialized with fixed location');
 });

@@ -12,6 +12,7 @@ body {
 	line-height: 1.5em;
 	margin: 0;
 	background-color: rgb(244, 241, 241);
+	transition: background-color 1s ease, color 1s ease;
 }
 a {
 	color: rgba(0, 0, 0, 0.8);
@@ -195,6 +196,7 @@ li:nth-child(7) {
     padding: 10px 20px;
     font-weight: normal;
     font-size: 13px;
+	transition: background-color 1s ease, color 1s ease;
    /* border-bottom: 1px solid #e0e0e0;  Light grey border for subtle separation */
 }
 
@@ -206,3 +208,44 @@ li:nth-child(7) {
 .weather-icon {
     margin-left: 5px;
 }
+
+
+/* Day mode (default) */
+body.day-mode {
+	background-color: rgb(244, 241, 241);
+    color: rgba(0, 0, 0, 0.8);
+}
+.day-mode .status-bar {
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(244, 241, 241);
+    color:#7f7f7f;
+	padding: 10px 20px;
+    font-weight: normal;
+    font-size: 13px;
+}
+
+/* .day-mode .status-bar {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+} */
+
+/* Night mode */
+body.night-mode{
+	background-color:  #fff8d5;
+	color: rgba(0, 0, 0, 0.8);
+}
+.night-mode .status-bar {
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:  #fff9d9;
+    color: #7f7f7f;
+	padding: 10px 20px;
+    font-weight: normal;
+    font-size: 13px;
+}
+
+/* .night-mode .status-bar {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+} */
