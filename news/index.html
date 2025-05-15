@@ -14,6 +14,15 @@
 </head>
 <body>
   <div id="index">
+	<div class="status-bar">
+		<div id="time">--:--</div>
+		<div id="location">LOADING...</div>
+		<div class="weather-info">
+			<span id="temperature">--°</span>
+			<span id="condition">--</span>
+			<span class="weather-icon" id="weather-icon">--</span>
+		</div>
+	</div>
 	<a href="../" style="color:#7f7f7f"> Home</a>
 		<div>
 			<h1><u>Random news</u></h1>
@@ -29,6 +38,10 @@
       </div>
   </div>
 
-
+  <!-- Include scripts at the end -->
+  <script src="../js/themeService.js"></script>
+	 <script src="../js/timeService.js"></script>
+	 <script src="../js/weatherService.js"></script>
+	 <script src="../js/main.js"></script>
 
 </body></html>
