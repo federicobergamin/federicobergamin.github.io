@@ -23,7 +23,7 @@ window.MISC_POSTS = [
 	{
 		slug: "bikepacking",
 		title: "The slow way home: bikepacking from Copenhagen to Onara",
-		subtitle: "A collection of thoughts in hindsight of my trip from Copenhagen to Italy by bike.",
+		subtitle: "A collection of thoughts looking back on my bike trip from Copenhagen to Italy.",
 		date: "2026-10-09",
 		// cover: "",
 		tags: ["cycling", "bikepacking", "gravel"],
