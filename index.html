@@ -9,8 +9,11 @@
 	<meta name="keywords" content="machine learning, probabilistic machine learning, generative models, variational inference">
 	<meta name="author" content="Federico Bergamin">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="main.css">
-	<!-- <link rel="shortcut icon" href="">  FIND MY ICON-->
+	<link rel="icon" type="image/svg+xml" href="favicon.svg">
 	<meta name="google-site-verification" content="LLy0KppLjhzKYeHsBg0vMbn2VItZiLaRZsqkSh5vJi8" />
 	<!-- Add icon library for academia -->
     <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
@@ -35,9 +38,9 @@
 		<script src="js/weatherService.js"></script>
 		<script src="js/themeService.js"></script>
 		<script src="js/main.js"></script> -->
-		<div>
+		<div class="profile-header">
 			<div class="column-picture left">
-				<img class="portrait" src="imgs/profile.JPG">
+				<img class="portrait" src="imgs/profile.JPG" width="180" height="166" alt="Portrait of Federico Bergamin">
 		   </div>
 		   <div class="column-picture right">
 			<h1>Federico Bergamin</h1>
@@ -61,6 +64,7 @@
 				<li>
 					<a href="misc/index.html"> Misc </a>
 				</li>
+				</ul>
 			</div>
 		</div>
 		<!--
@@ -111,18 +115,17 @@
 
 		<div id="about">
 			<h3>Random News</h3>
-			<ul>
-				<li>May 2025: The paper below was accepted at ICML. <a href="https://openreview.net/forum?id=7J1kwZY72h">Camera ready</a> is available, <a href="https://github.com/frcnt/kldm">code</a> will be out soon!</li>
-				<li>Apr. 2025: Our paper <a href="https://openreview.net/forum?id=Mttf1RoKKM#discussion">"Kinetic Langevin Diffusion for Crystalline Materials Generation"</a> done together with my colleague François was accepted at the AI4MAT workshop @ ICLR.</li>
-				<li>Oct. 2024: I wanted to understand better the relation between a flow matching and a score-based model. I wrote a short note on this <a href="https://hackmd.io/@fedbe/Hyryj7de1l"> here</a>.</li>
-				<li>Oct. 2024: Our work <a href="https://arxiv.org/abs/2410.16415">"On conditional diffusion models for PDE simulations"</a> done together with <a href="https://scholar.google.com/citations?user=Zm8hNeUAAAAJ&hl=en">Sasha</a> and <a href="https://cddcam.github.io/">Cristiana</a> while I was visiting Cambridge has been accepted at NeurIPS! Paper and code are also out now!</li> 
-				<li>Aug. 2024: I started as a postdoc still at DTU!</li> 
-				<li>June 2024: I defended my PhD! (Here you can have a  <a href="imgs/defense.jpg"> proof</a>). Thanks again to Ole Winther, Matthias Bauer, and Eric Nalisnick for serving as examiners. Thanks also to all my collaborators for the past three years! You can find the thesis <a href="documents/PhD_thesis_Bergamin.pdf"> here</a>.</li>
-				<li>
-					<a href="news/index.html"> All news</a>
-				</li>
-			</ul>
+			<div id="news-list"></div>
 		</div>
+
+
+		<!-- Gallery: hidden for now. To bring it back, uncomment this block
+		     and the gallery scripts at the bottom of the page.
+		<section id="about">
+			<h3>Gallery</h3>
+			<div id="gallery"></div>
+		</section>
+		-->
 
 
 		<div id="about">
@@ -143,9 +146,6 @@
 					</li>
 					<li>
 						<a href="https://twitter.com/fedebergamin" class="fa fa-twitter"></a>
-					</li>
-					<li>
-						<a href="https://bsky.app/profile/federicobergamin.bsky.social" class="fa fa-bluesky"></a>
 					</li>
 					<!-- <li>
 							<a href="mailto:bergamin.federico@gmail.com?Subject=Hi!" class="fa fa-envelope" ></a>
@@ -170,5 +170,19 @@
 	 <script src="js/timeService.js"></script>
 	 <script src="js/weatherService.js"></script>
 	 <script src="js/main.js"></script>
+
+	 <script src="news/news-data.js"></script>
+	 <script src="js/newsRenderer.js"></script>
+	 <script>
+		NewsRenderer.render(window.NEWS, document.getElementById('news-list'), { limit: 6, moreHref: 'news/index.html', basePath: '' });
+	 </script>
+
+	 <!-- Gallery scripts (see the Gallery block above).
+	 <script src="gallery/gallery-data.js"></script>
+	 <script src="js/galleryRenderer.js"></script>
+	 <script>
+		GalleryRenderer.render(window.GALLERY, document.getElementById('gallery'));
+	 </script>
+	 -->
 
 </body></html>

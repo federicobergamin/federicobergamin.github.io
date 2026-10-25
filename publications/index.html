@@ -9,12 +9,15 @@
 	<meta name="keywords" content="machine learning, probabilistic machine learning, generative models, variational inference">
 	<meta name="author" content="Federico Bergamin">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="../main.css">
-	<!-- <link rel="shortcut icon" href="">  FIND MY ICON-->
+	<link rel="icon" type="image/svg+xml" href="../favicon.svg">
 </head>
 <body>
 
-	
+
   <div id="index">
 	<div class="status-bar">
 		<div id="time">--:--</div>
@@ -25,87 +28,21 @@
 			<span class="weather-icon" id="weather-icon">--</span>
 		</div>
 	</div>
-        <a href="../" style="color:#7f7f7f"> Home</a>
-		<div>
+        <nav class="nav">
+		<ul>
+			<li><a href="../">&larr; Home</a></li>
+		</ul>
+	</nav>
+		<div id="papers">
 			<h1>Publications</h1>
 			<h3>Conference papers</h3>
-        <div id="about">
-			<ul>
-				<li> <b>"Kinetic Langevin Diffusion for Crystalline Materials Generation." </b><br>
-					{F. Cornet, <u>F. Bergamin</u>}<sup>*</sup>, A. Bhowmik, J.M. García-Lastra, J. Frellsen, M.N. Schmidt<br>
-					In <i>International Conference on Machine Learning (ICML), 2025</i><br>
-					[<a href="https://arxiv.org/abs/2507.03602"> arXiv </a>] [<a href="https://github.com/frcnt/kldm"> Code </a>] [<a href="Files/ICML_Poster_v4.0.pdf"> Poster </a>]
-				</li>
-		</ul>
-			<ul>
-				<li> <b>"On conditional diffusion models for PDE simulations." </b><br>
-					{A. Shysheya, C. Diaconu, <u>F. Bergamin</u>}<sup>*</sup>, P. Perdikaris, J.M. Hernández-Lobato, R.E. Turner, E. Mathieu<br>
-					In <i>Advances in Neural Information Processing Systems (NeurIPS), 2024</i><br>
-					[<a href="https://arxiv.org/abs/2410.16415"> arXiv </a>] [<a href="https://github.com/cambridge-mlg/pdediff"> Code </a>] [<a href="Files/neurips2024_poster.pdf"> Poster </a>]
-				</li>
-		</ul>
+			<div id="conference-papers"></div>
 
-            <ul>
-					<li> <b>"Riemannian Laplace approximations for Bayesian neural networks." </b><br>
-						<u>F. Bergamin</u>, P. Moreno-Muñoz, S. Hauberg and G. Arvanitidis<br>
-						In <i>Advances in Neural Information Processing Systems (NeurIPS), 2023</i><br>
-						[<a href="https://arxiv.org/abs/2306.07158"> arXiv </a>] [<a href="https://github.com/federicobergamin/riemannian-laplace-approximation"> Code </a>] [<a href="Files/neurips2023_poster.pdf"> Poster </a>]
-					</li>
-			</ul>
-			
-			<ul>
-					<li> <b>"Model-agnostic out-of-distribution detection using combined statistical tests." </b><br>
-                        {<u>F. Bergamin</u>, P-A. Mattei}<sup>*</sup>, J.D. Havtorn , H. Senetaire, H. Schmutz, L. Maaløe, S. Hauberg, J. Frellsen<br>
-						<i>Proceedings of the 25th International Conference on Artificial Intelligence and Statistics (AISTATS), 2022.</i><br>
-                        [<a href="https://arxiv.org/abs/2203.01097"> arXiv </a>] [<a href="https://github.com/federicobergamin/model-agnostic-ood"> Code </a>] [<a href="Files/aistats_poster.pdf"> Poster </a>]
-                    </li>
-            </ul>
-
-      	</div>
-
-		  <div>
 			<h3>Workshop papers</h3>
-			<div id="about">
-				<ul>
-					<li> <b>"Kinetic Langevin Diffusion for Crystalline Materials Generation." </b><br>
-                        {F. Cornet, <u>F. Bergamin</u>}<sup>*</sup>, A. Bhowmik, J.M. García-Lastra, J. Frellsen, M.N. Schmidt<br>
-						<i>In Workshop on AI for Accelerated Materials Design  </i><br>
-						<i>AI4MAT @ ICLR, 2025</i><br>
-                        [<a href="https://openreview.net/forum?id=Mttf1RoKKM#discussion"> pdf </a>] 
-                    </li>
-				</ul>
-				<ul>
-					<li> <b>"Guided Autoregressive Diffusion Models with Applications to PDE Simulation." </b><br>
-                        {<u>F. Bergamin</u>, C. Diaconu, A. Shysheya}<sup>*</sup>, P. Perdikaris, J.M. Hernández-Lobato, R.E. Turner, E. Mathieu<br>
-						<i>In Workshop on AI4DifferentialEquations in Science </i><br>
-						<i>AI4DiffEqtnsInSci @ ICLR, 2024</i><br>
-                        [<a href="https://openreview.net/forum?id=1avNKFEIOL&referrer=%5Bthe%20profile%20of%20Federico%20Bergamin%5D(%2Fprofile%3Fid%3D~Federico_Bergamin1)"> pdf </a>] 
-                    </li>
-				</ul>
+			<div id="workshop-papers"></div>
 
-		</div>
-
-	  	<!-- <div>
-			<h1>Preprints and working papers</h1>
-			<div id="about">
-				<ul>
-				
-				</ul>
-			</div>
-
-		</div> -->
-
-		<div>
 			<h3>Thesis</h3>
-			<div id="about">
-				<ul>
-					<li> <b>"Advances in Deep Generative Models, Approximate Inference, and their Applications." </b><br>
-						<u>F. Bergamin</u><br>
-						<i>PhD Thesis, Technical University of Denmark (DTU), 2024</i><br>
-						[<a href="https://github.com/federicobergamin/PhD_Thesis"> PDF </a>]
-				</ul>
-			</div>
-
+			<div id="thesis-papers"></div>
 		</div>
 
   </div>
@@ -114,5 +51,13 @@
 	 <script src="../js/timeService.js"></script>
 	 <script src="../js/weatherService.js"></script>
 	 <script src="../js/main.js"></script>
+
+	 <script src="publications-data.js"></script>
+	 <script src="../js/publicationsRenderer.js"></script>
+	 <script>
+		PublicationsRenderer.render(window.PUBLICATIONS.conference, document.getElementById('conference-papers'));
+		PublicationsRenderer.render(window.PUBLICATIONS.workshop, document.getElementById('workshop-papers'));
+		PublicationsRenderer.render(window.PUBLICATIONS.thesis, document.getElementById('thesis-papers'));
+	 </script>
 
 </body></html>

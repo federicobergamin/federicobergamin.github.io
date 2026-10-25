@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<title>Test Note - Federico Bergamin</title>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+
+	<meta name="description" content="Federico Bergamin is a postdoctoral researcher at DTU Compute.">
+	<meta name="author" content="Federico Bergamin">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../../../main.css">
+	<link rel="stylesheet" type="text/css" href="../../../blog.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+	<link rel="icon" type="image/svg+xml" href="../../../favicon.svg">
+</head>
+<body>
+  <div id="index">
+	<div class="status-bar">
+		<div id="time">--:--</div>
+		<div id="location">LOADING...</div>
+		<div class="weather-info">
+			<span id="temperature">--°</span>
+			<span id="condition">--</span>
+			<span class="weather-icon" id="weather-icon">--</span>
+		</div>
+	</div>
+	<nav class="nav">
+		<ul>
+			<li><a href="../../">&larr; Notes</a></li>
+		</ul>
+	</nav>
+
+	<div>
+		<div id="post-header" class="post-header"></div>
+		<div id="post-body" class="post-body"></div>
+	</div>
+  </div>
+
+  <!-- Include scripts at the end -->
+  <script src="../../../js/themeService.js"></script>
+	 <script src="../../../js/timeService.js"></script>
+	 <script src="../../../js/weatherService.js"></script>
+	 <script src="../../../js/main.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked@4.3.0/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+  <script src="../../posts-manifest.js"></script>
+  <script src="../../../js/galleryRenderer.js"></script>
+  <script src="../../../js/blogEngine.js"></script>
+  <script>
+    BlogEngine.renderPost(window.NOTES_POSTS, "test-note");
+  </script>
+
+</body></html>

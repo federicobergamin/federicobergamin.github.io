@@ -9,8 +9,12 @@
 	<meta name="keywords" content="machine learning, probabilistic machine learning, generative models, variational inference">
 	<meta name="author" content="Federico Bergamin">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="../main.css">
-	<!-- <link rel="shortcut icon" href="">  FIND MY ICON-->
+	<link rel="stylesheet" type="text/css" href="../blog.css">
+	<link rel="icon" type="image/svg+xml" href="../favicon.svg">
 </head>
 <body>
   <div id="index">
@@ -23,31 +27,47 @@
 			<span class="weather-icon" id="weather-icon">--</span>
 		</div>
 	</div>
-	<a href="../" style="color:#7f7f7f"> Home</a>
+	<nav class="nav">
+		<ul>
+			<li><a href="../">&larr; Home</a></li>
+		</ul>
+	</nav>
 		<div>
 			<h1><u>Notes</u></h1>
+			<p style="color: rgba(0,0,0,0.6); margin-top: -10px;">Longer write-ups on things I've been reading or thinking about.</p>
+			<div id="feed" class="feed"></div>
 
-			<p><b>Notes on the relation between the velocity field and the score</b> [<a href="https://hackmd.io/@fedbe/Hyryj7de1l"> Notes </a>]<br>
-				Notes I wrote after discussing with my colleagues Stas and Sasha regarding the relation between flow matching and score-based models.<br>
-				These are useful mostly for performing conditional sampling using a flow-matching model.
-			</p>
+			<h3><u>Other notes</u></h3>
+			<p style="color: rgba(0,0,0,0.6); margin-top: -10px;">Older lecture notes and short write-ups hosted elsewhere (PDFs, HackMD, ...).</p>
 
-			<h3><u>Some old notes I wrote for course</u></h3>
-      <div id="about">
-          <!-- <p> Some old notes I have written. <br> -->
-          </p>
+			<!-- Same row markup as the feed above (styles in blog.css). -->
+			<ul class="feed-list">
+				<!-- <li class="feed-row">
+					<span class="feed-row-left">
+						<a class="feed-row-title" href="https://hackmd.io/@fedbe/Hyryj7de1l">Notes on the relation between the velocity field and the score</a>
+						<span class="feed-row-subtitle">Notes I wrote after discussing with my colleagues Stas and Sasha regarding the relation between flow matching and score-based models.
+							These are useful mostly for performing conditional sampling using a flow-matching model.</span>
+					</span>
+					<span class="feed-row-meta"><span class="tag tag-c1">HackMD</span><span>Oct 2024</span></span>
+				</li> -->
+				<li class="feed-row">
+					<span class="feed-row-left">
+						<a class="feed-row-title" href="blog_files/Gaussian_Processes_lecture_notes.pdf">Introductory Notes on Gaussian Processes</a>
+						<span class="feed-row-subtitle">Notes I have written for the BSc course "Active Machine Learning and Agency".
+							Thanks to Kristoffer Hougaard Madsen and Michael Riis Andersen for their feedback.</span>
+					</span>
+					<span class="feed-row-meta"><span class="tag tag-c4">PDF</span></span>
+				</li>
+				<li class="feed-row">
+					<span class="feed-row-left">
+						<a class="feed-row-title" href="blog_files/Bayesian_Optimization_lecture_notes.pdf">Introductory Notes on Bayesian Optimization</a>
+						<span class="feed-row-subtitle">Notes I have written for the BSc course "Active Machine Learning and Agency".
+							Thanks to Kristoffer Hougaard Madsen and Michael Riis Andersen for their feedback.</span>
+					</span>
+					<span class="feed-row-meta"><span class="tag tag-c4">PDF</span></span>
+				</li>
+			</ul>
 
-					<p><b>Introductory Notes on Gaussian Processes</b> [<a href="blog_files/Gaussian_Processes_lecture_notes.pdf"> Notes </a>]<br>
-						Notes I have written for the BSc course "Active Machine Learning and Agency" <br>
-						Thanks to Kristoffer Hougaard Madsen and Michael Riis Andersen for their feedback.
-					</p>
-
-					<p><b>Introductory Notes on Bayesian Optimization</b> [<a href="blog_files/Bayesian_Optimization_lecture_notes.pdf"> Notes </a>]<br>
-						Notes I have written for the BSc course "Active Machine Learning and Agency" <br>
-						Thanks to Kristoffer Hougaard Madsen and Michael Riis Andersen for their feedback.
-					</p>
-
-      </div>
   </div>
 
 
@@ -55,4 +75,10 @@
   <script src="../js/timeService.js"></script>
   <script src="../js/weatherService.js"></script>
   <script src="../js/main.js"></script>
+
+  <script src="posts-manifest.js"></script>
+  <script src="../js/blogEngine.js"></script>
+  <script>
+    BlogEngine.renderFeed(window.NOTES_POSTS, { postsBasePath: "posts/" });
+  </script>
 </body></html>

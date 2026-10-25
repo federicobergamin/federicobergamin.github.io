@@ -1,0 +1,302 @@
+/* blog.css
+ * Shared styles for the Substack-style blogpost engine (feed + post pages).
+ * Used by /misc today; written so it can be reused by /blog (Notes) later.
+ * Colors are opacity-based (rgba(0,0,0,x)) so they work unchanged under
+ * both body.day-mode and body.night-mode defined in main.css.
+ */
+
+/* ---------- Feed ---------- */
+.feed {
+	margin-top: 24px;
+	margin-bottom: 40px;
+}
+
+.feed-filters {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px;
+	margin-bottom: 12px;
+}
+
+.filter-btn {
+	appearance: none;
+	font: inherit;
+	font-size: 12px;
+	padding: 2px 10px;
+	color: rgba(0, 0, 0, 0.75);
+	background: transparent;
+	border: 1px solid rgba(0, 0, 0, 0.15);
+	border-radius: 999px;
+	cursor: pointer;
+	transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.filter-btn:hover {
+	background: rgba(0, 0, 0, 0.05);
+	border-color: rgba(0, 0, 0, 0.3);
+}
+
+.filter-btn.active {
+	color: #fff;
+	background: var(--tag-color, rgba(0, 0, 0, 0.75));
+	border-color: var(--tag-color, rgba(0, 0, 0, 0.75));
+}
+
+.feed-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.feed-row {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: 16px;
+	padding: 10px 0;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.feed-row:first-child {
+	border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.feed-row-left {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+	flex: 1;
+	min-width: 0;
+}
+
+.feed-row-title {
+	font-weight: 500;
+}
+
+.feed-row-subtitle {
+	font-size: 13px;
+	line-height: 1.4;
+	color: rgba(0, 0, 0, 0.55);
+}
+
+.feed-row-meta {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	gap: 4px;
+	font-size: 13px;
+	color: rgba(0, 0, 0, 0.55);
+	white-space: nowrap;
+}
+
+.feed-row-tags {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	gap: 4px;
+}
+
+.tag {
+	display: inline-block;
+	font-size: 11px;
+	font-weight: 500;
+	line-height: 1.6;
+	padding: 0 7px;
+	border-radius: 999px;
+	color: var(--tag-color, rgba(0, 0, 0, 0.7));
+	background: rgba(0, 0, 0, 0.07);
+}
+
+/* Tag palette, assigned per tag name by tagColorClass() in blogEngine.js. */
+.tag-c0 { --tag-color: #9a5b13; }
+.tag-c1 { --tag-color: #2f5d8a; }
+.tag-c2 { --tag-color: #3f6b3a; }
+.tag-c3 { --tag-color: #7a4a78; }
+.tag-c4 { --tag-color: #a23b3b; }
+.tag-c5 { --tag-color: #2e6f6a; }
+.tag.tag-c0 { background: rgba(154, 91, 19, 0.12); }
+.tag.tag-c1 { background: rgba(47, 93, 138, 0.12); }
+.tag.tag-c2 { background: rgba(63, 107, 58, 0.13); }
+.tag.tag-c3 { background: rgba(122, 74, 120, 0.12); }
+.tag.tag-c4 { background: rgba(162, 59, 59, 0.11); }
+.tag.tag-c5 { background: rgba(46, 111, 106, 0.12); }
+
+.feed-empty {
+	color: rgba(0, 0, 0, 0.5);
+	font-style: italic;
+}
+
+/* ---------- Post header ---------- */
+.post-header {
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+
+.post-title {
+	font-size: 32px;
+	line-height: 1.25;
+	margin: 0 0 10px 0;
+}
+
+.post-subtitle {
+	font-size: 18px;
+	color: rgba(0, 0, 0, 0.6);
+	margin: 0 0 12px 0;
+	font-weight: normal;
+}
+
+.post-meta {
+	color: #7f7f7f;
+	font-size: 13px;
+}
+
+.post-cover {
+	margin: 20px 0 0 0;
+}
+
+.post-cover img {
+	width: 100%;
+	height: auto;
+	border-radius: 8px;
+	display: block;
+}
+
+/* ---------- Post body ---------- */
+.post-body {
+	line-height: 1.7;
+	font-size: 16px;
+}
+
+.post-body h2 {
+	margin-top: 2em;
+	margin-bottom: 0.6em;
+	font-size: 22px;
+}
+
+.post-body h3 {
+	margin-top: 1.6em;
+	margin-bottom: 0.5em;
+	font-size: 18px;
+}
+
+.post-body p {
+	margin: 0 0 1.2em 0;
+}
+
+.post-body blockquote {
+	margin: 1.2em 0;
+	padding-left: 16px;
+	border-left: 3px solid rgba(0, 0, 0, 0.2);
+	color: rgba(0, 0, 0, 0.65);
+	font-style: italic;
+}
+
+.post-body code {
+	background: rgba(0, 0, 0, 0.06);
+	border-radius: 3px;
+	padding: 0.15em 0.4em;
+	font-family: courier, monospace;
+	font-size: 0.9em;
+}
+
+.post-body pre {
+	background: rgba(0, 0, 0, 0.06);
+	border-radius: 6px;
+	padding: 14px 16px;
+	overflow-x: auto;
+}
+
+.post-body pre code {
+	background: none;
+	padding: 0;
+}
+
+.post-body ul,
+.post-body ol {
+	padding-left: 22px;
+	margin: 0 0 1.2em 0;
+}
+
+.post-body img {
+	max-width: 100%;
+	height: auto;
+}
+
+.post-figure {
+	margin: 1.8em auto;
+	text-align: center;
+}
+
+.post-figure img {
+	max-width: 100%;
+	height: auto;
+	border-radius: 4px;
+}
+
+.post-figure figcaption {
+	margin-top: 8px;
+	color: rgba(0, 0, 0, 0.5);
+	font-size: 13px;
+}
+
+/* :::gallery blocks, rendered as the slideshow styled in main.css */
+.post-gallery {
+	margin: 1.8em 0;
+}
+
+.post-gallery .slideshow-image {
+	height: 100%; /* undo .post-body img's height: auto so tall photos fit */
+}
+
+/* HackMD-style :::info / :::warning / :::success / :::danger boxes */
+.post-body .callout {
+	margin: 1.4em 0;
+	padding: 14px 18px;
+	border-radius: 6px;
+	border-left: 4px solid var(--callout-color, #2f5d8a);
+	background: var(--callout-bg, rgba(47, 93, 138, 0.10));
+}
+
+.post-body .callout > :last-child {
+	margin-bottom: 0;
+}
+
+.post-body .callout-info    { --callout-color: #2f5d8a; --callout-bg: rgba(47, 93, 138, 0.10); }
+.post-body .callout-success { --callout-color: #3f6b3a; --callout-bg: rgba(63, 107, 58, 0.10); }
+.post-body .callout-warning { --callout-color: #b07a12; --callout-bg: rgba(214, 160, 40, 0.15); }
+.post-body .callout-danger  { --callout-color: #a23b3b; --callout-bg: rgba(162, 59, 59, 0.10); }
+
+.post-body .katex-display {
+	overflow-x: auto;
+	overflow-y: hidden;
+	padding: 4px 0;
+}
+
+.post-footer {
+	margin-top: 50px;
+	padding-top: 16px;
+	border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* ---------- Mobile ---------- */
+@media screen and (max-width: 600px) {
+	.feed-row {
+		flex-direction: column;
+		gap: 4px;
+	}
+
+	.feed-row-meta {
+		flex-direction: row-reverse;
+		align-items: center;
+		gap: 8px;
+		white-space: normal;
+	}
+
+	.post-title {
+		font-size: 24px;
+	}
+
+	.post-subtitle {
+		font-size: 15px;
+	}
+}

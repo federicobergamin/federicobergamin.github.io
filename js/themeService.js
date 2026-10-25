@@ -24,15 +24,16 @@ const ThemeService = {
         const statusBar = document.querySelector('.status-bar');
         
         if (isDaytime) {
-            // Day theme: black text on white background
+            // Day theme: normal warm-beige background and text
             body.classList.remove('night-mode');
             body.classList.add('day-mode');
-            console.log('Applied day theme based on user local time');
+            console.log('Applied day theme based on visitor local time');
         } else {
-            // Night theme: white text on dark background
+            // Night theme: dimmer, warmer, lower-glare colors (not a dark
+            // theme) for easier reading at night
             body.classList.remove('day-mode');
             body.classList.add('night-mode');
-            console.log('Applied night theme based on user local time');
+            console.log('Applied night theme based on visitor local time');
         }
     }
 };

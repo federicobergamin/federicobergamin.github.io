@@ -7,11 +7,11 @@
 
 body {
 	color: rgba(0, 0, 0, 0.8);
-	font-family: -apple-system, Helvetica, arial, sans-serif;
+	font-family: 'Space Grotesk', -apple-system, Helvetica, arial, sans-serif;
 	font-size: 15px;
 	line-height: 1.5em;
 	margin: 0;
-	background-color: rgb(244, 241, 241);
+	background-color: #f3efe6;
 	transition: background-color 1s ease, color 1s ease;
 }
 a {
@@ -55,7 +55,7 @@ ul#links {
 	font-weight: bold;
 }
 ul#links li {
-	font-family: -apple-system, helvetica, arial, sans-serif;
+	font-family: 'Space Grotesk', -apple-system, helvetica, arial, sans-serif;
 	display: inline;
 	margin-right: 20px;
 	margin-top: 15px;
@@ -85,14 +85,29 @@ ul#links li a:hover {
 	margin: 0 auto 100px auto;
 }
 #papers {
-	margin-top: 40px;
+	margin-top: 10px;
 }
 #papers h1 {
-	margin-top: 60px;
-	margin-bottom: 40px;
+	margin-top: 0;
+	margin-bottom: 30px;
+}
+#papers h3 {
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+	color: rgba(0, 0, 0, 0.5);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+	padding-bottom: 8px;
+	margin-top: 50px;
+	margin-bottom: 25px;
+}
+#papers h3:first-of-type {
+	margin-top: 0;
 }
 #papers .paper-row {
 	margin-bottom: 30px;
+	padding-left: 14px;
+	border-left: 2px solid rgba(0, 0, 0, 0.08);
 }
 #papers .paper-title,
 #papers .paper-authors,
@@ -130,8 +145,10 @@ ul#links li a:hover {
 .fa {
         padding: 1px;
         font-size: 1.5em;
-        width: 35px;
-        text-align: left;
+        width: 44px;
+        height: 44px;
+        line-height: 44px;
+        text-align: center;
         text-decoration: none;
         color:black;
         /*border:2px solid black;*/
@@ -155,6 +172,7 @@ padding-right: 0px;
 }
 .column-picture {
 float: left;
+padding-top: 20px;
 }
 .left {
 	width: calc(175px + 1.5em);
@@ -169,13 +187,101 @@ float: left;
 }
 
 .portrait {
-	padding-top: 15px;
+	display: block;
 	width: 180px;
+	height: auto;
+	border-radius: 4px;
+}
+/* Photo and info side by side, tops aligned, with the Papers/Notes/Misc
+ * links pinned to the bottom edge of the photo. */
+.profile-header {
+	display: flex;
+	align-items: stretch;
+	margin-bottom: 32px;
+}
+.column-picture.right {
+	display: flex;
+	flex-direction: column;
+}
+.column-picture.right h1 {
+	margin-top: 0;
+	margin-bottom: 12px;
+}
+.column-picture.right p {
+	margin: 0;
+}
+.column-picture.right ul#links {
+	margin: auto 0 0 0;
+	line-height: 1;
 }
 
-li:nth-child(7) {
-	list-style-type: none; 
- }
+#news-list .news-more {
+	list-style-type: none;
+	margin-left: -1.1em;
+}
+
+/* Gallery slideshow (js/galleryRenderer.js).
+ */
+.slideshow-card {
+	margin: 0;
+}
+.slideshow-viewport {
+	aspect-ratio: 16 / 10;
+	max-height: 360px;
+	width: 100%;
+	overflow: hidden;
+	background: rgba(0, 0, 0, 0.05);
+	border: 1px solid rgba(0, 0, 0, 0.08);
+	border-radius: 4px;
+	outline: none;
+}
+.slideshow-viewport:focus-visible {
+	border-color: rgba(0, 0, 0, 0.4);
+}
+.slideshow-image {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	transition: opacity 0.25s ease;
+}
+.slideshow-image.is-loading {
+	opacity: 0;
+}
+.slideshow-caption {
+	margin-top: 8px;
+	color: rgba(0, 0, 0, 0.6);
+	font-size: 14px;
+	min-height: 1.5em;
+}
+.slideshow-controls {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	margin-top: 10px;
+}
+.slideshow-button {
+	appearance: none;
+	font: inherit;
+	color: rgba(0, 0, 0, 0.75);
+	background: transparent;
+	border: 1px solid rgba(0, 0, 0, 0.15);
+	border-radius: 999px;
+	cursor: pointer;
+	transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+	font-size: 13px;
+	padding: 4px 12px;
+}
+.slideshow-button:hover {
+	background: rgba(0, 0, 0, 0.05);
+	border-color: rgba(0, 0, 0, 0.3);
+}
+.slideshow-counter {
+	margin-left: auto;
+	font-family: courier;
+	font-size: 13px;
+	color: rgba(0, 0, 0, 0.5);
+}
 
 /* Mobile.
  */
@@ -183,9 +289,37 @@ li:nth-child(7) {
 	body {
 		margin: 0 7px 0 7px !important;
 	}
+	.profile-header {
+		flex-direction: column;
+	}
+	.column-picture.left,
+	.column-picture.right {
+		float: none;
+		width: 100%;
+		text-align: center;
+	}
+	.column-picture.right {
+		padding-top: 24px;
+	}
+	.column-picture.right h1 {
+		margin-top: 0;
+	}
+	.column-picture.right ul#links {
+		margin: 15px 0 0 0;
+	}
+	.portrait {
+		margin: 0 auto;
+	}
+	.status-bar,
+	.day-mode .status-bar,
+	.night-mode .status-bar {
+		flex-wrap: wrap;
+		row-gap: 4px;
+		font-size: 11px;
+	}
 }
 
-/* Stuff I am trying out.
+/* Day/night status bar + theming.
  */
  .status-bar {
     display: flex;
@@ -212,14 +346,14 @@ li:nth-child(7) {
 
 /* Day mode (default) */
 body.day-mode {
-	background-color: rgb(244, 241, 241);
+	background-color: #f3efe6;
     color: rgba(0, 0, 0, 0.8);
 }
 .day-mode .status-bar {
 	display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(244, 241, 241);
+    background-color: #f3efe6;
     color:#7f7f7f;
 	padding: 10px 20px;
     font-weight: normal;
@@ -230,16 +364,18 @@ body.day-mode {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 } */
 
-/* Night mode */
+/* Night mode: dimmer and warmer than day mode for easier reading at
+ * night, not a dark theme.
+ */
 body.night-mode{
-	background-color:  #fff8d5;
-	color: rgba(0, 0, 0, 0.8);
+	background-color:  #e9e2d2;
+	color: rgba(40, 36, 30, 0.82);
 }
 .night-mode .status-bar {
 	display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color:  #fff9d9;
+    background-color:  #e9e2d2;
     color: #7f7f7f;
 	padding: 10px 20px;
     font-weight: normal;
