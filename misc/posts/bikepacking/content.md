@@ -110,6 +110,8 @@ HIGHLIGHTS OF THE DAY:
      Swipe on phones, Prev/Next buttons or arrow keys on a computer. -->
 :::gallery
 <!-- ![Day 1: my setup before leaving](images/day1-setup.jpeg) -->
+![Approaching Præsto with François](images/praesto.jpeg)
+![Heiligenhafen and the typical beach chairs](images/heiligenhafen.jpeg)
 ![Classic turistic pic with the most turistic thing in Lübeck](images/fedbe-lubeck.jpeg)
 ![Along the Elbe Kanal](images/elbe-kanal.jpeg)
 ![Almost at the top of the climb in the Harz National park](images/harz.jpeg)
@@ -118,8 +120,10 @@ HIGHLIGHTS OF THE DAY:
 ![Chased by storm in the Heininch National park](images/heinich.jpeg)
 ![What it means to be Komooted](images/komooted.jpeg)
 ![The red hill (or Kalihalde Bischofferode) ](images/montagna-rossa.jpeg)
+![Kind of swedish gravel but on the Rennweg Radroute](images/swedish.jpeg)
 ![Turistic picture in Bamberg](images/fedbe-bamberg.jpeg)
 ![You must have seen a lot of places!! These were the average path I was spending my day on](images/average-places.jpeg)
+![What komoot thinks gravel is. I can't imagine what someone would have thought seeing me literally going into the fields with a bike with bags on it. Also I had no legs at that point.](images/gravel_ahah.jpeg)
 :::
 
 ### Day 6: Nürneberg - Donauwörth (+ train to Ulm), 113km:
@@ -148,7 +152,7 @@ HIGHLIGHTS OF THE DAY:
 - All the schnitzel and fries I had in those days
 
 
-### Day 8: Ulm - Oberammergau
+### Day 8: Ulm - Oberammergau, 156km
 I never thought about the Alps until that day. I always believed the hard part was crossing central Germany to reach Nürnberg and then Ulm. That alone was already a victory for me, so I never really thought about the rest of the trip. After five days with Kilian, it was difficult to leave and realize I still had plenty of me time ahead. But at the same time, I was excited about the change of scenery. If there's one reason I love watching the Giro and the Tour, it’s the mountain stages, so I was looking forward to being surrounded by mountains. (After replanning, I'd chosen the easiest way from Austria to Italy, the Brenner Pass.)
 
 But the Brenner was still far away. First, there were 156km between Ulm and Oberammergau. I had promised myself to do short stages so my pain wouldn't get worse, but on the Bett+Bike website, the only accommodation with a reasonable price on my route was in Oberammergau. Since I wanted to take it easy, I said goodbye to Kilian on the outskirts of the city and started the last part of my trip at 7:40.
@@ -218,15 +222,20 @@ HIGHLIGHTS OF THE DAY:
 <!-- ![Day 1: my setup before leaving](images/day1-setup.jpeg) -->
 ![View of Ulm](images/ulm.jpeg)
 ![The Donau along the Donau Radweg](images/donau-river2.jpeg)
+![Kili along the Donau](images/kili1.jpeg)
 ![Sigmaringen castle](images/sigmaringen.jpeg)
+![Forcing Kili to do 130km for the first time. It was an amazing day out there!](images/kili2.jpeg)
 ![One of the plenty Schnitzel I had in the last week](images/schnitzel.jpeg)
 ![Deserved icecream in Oberammergau](images/icecream-oberammer.jpeg)
 ![The gravel path to the river I have pinned on my Google Maps](images/garmish-area.jpeg)
 ![Classic picture of Innsbruck](images/innsbruck.jpeg)
+![View from the balcony in my hotel in Matrei](images/view_from_balcony.jpeg)
 ![Made to Italy! The only interesting thing at the border](images/brenner.jpeg)
 ![Icecream in Bozen seated on the floor](images/icecream-bozen.jpeg)
 ![On my way to Trento](images/adige.jpeg)
+![Brenta River in Grigno](images/brenta.jpeg)
 ![View from the Ponte Vecchio in Bassano](images/bdg.jpeg)
+![Cittadella, or Sitadea and its medieval walls. Home.](images/sitadea.jpeg)
 :::
 
 <!-- Gallery example: swap in your own photos and captions, one per line.
