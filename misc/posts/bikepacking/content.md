@@ -235,7 +235,8 @@ HIGHLIGHTS OF THE DAY:
 ![On my way to Trento](images/adige.jpeg)
 ![Brenta River in Grigno](images/brenta.jpeg)
 ![View from the Ponte Vecchio in Bassano](images/bdg.jpeg)
-![Cittadella, or Sitadea and its medieval walls. Home.](images/sitadea.jpeg)
+![Cittadella, or Sitadea and its medieval walls](images/sitadea.jpeg)
+![1700km later, made it home](images/home.JPG)
 :::
 
 <!-- Gallery example: swap in your own photos and captions, one per line.
